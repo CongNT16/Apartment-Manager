@@ -10,7 +10,7 @@
 
           - Host: chủ nhà trọ, chung cư
 
-	    - Admin: chủ web, quản lý web
+	  - Admin: chủ web, quản lý web
 
 
 3. Khi không đăng nhập:
@@ -43,7 +43,7 @@
 
            - Tất cả các quyền của khách
 
-           - Xem báo cáo, contact cảu khách
+           - Xem báo cáo, contact của khách
 
            - Quản lý thông tin trọ, cập nhật thông tin trọ : ảnh, chi tiết,..
 
@@ -51,7 +51,7 @@
 
            - Chỉnh sửa thôn tin tài khoản của staff, tenant,..
 
-	     - Tạo, sửa, xoá các tầng trong trọ
+	   - Tạo, sửa, xoá các tầng trong trọ
 
            - Tạo, sửa xoá các loại phòng trong trọ ( giá tiền, ảnh , mô tả, số lượng người 1 phòng,..)
 
