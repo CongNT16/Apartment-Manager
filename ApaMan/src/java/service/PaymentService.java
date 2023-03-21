@@ -6,6 +6,7 @@ package service;
 
 import dao.PaymentDAO;
 import entity.Payment;
+import java.util.List;
 
 /**
  *
@@ -33,6 +34,14 @@ public class PaymentService {
 
     public boolean updatePayment(Payment obj) {
         return paymentDAO.updatePayment(obj);
+    }
+    
+    public List<Payment> getAllHistoryByApartmentId(int apartmentId) {
+        return paymentDAO.getAllHistoryByApartmentId(apartmentId);
+    }
+    
+    public List<Payment> getAllHistoryMonth(int apartmentId, long firstMonth, long nextMonth) {
+        return paymentDAO.getAllHistoryMonth(apartmentId,firstMonth, nextMonth);
     }
 
 }

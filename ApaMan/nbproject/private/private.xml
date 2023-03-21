@@ -2,17 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/web/component/modal/modal-payment.jsp</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/src/java/controller/host/confirmPaymentController.java</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/src/java/controller/host/PaymentController.java</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/src/java/dao/RoomDAO.java</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/web/floor-room.jsp</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/src/java/controller/host/PageFloorRoomController.java</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/src/java/controller/host/GetElectricWaterController.java</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/src/java/service/RoomService.java</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/web/component/modal/modal-confirm-payment.jsp</file>
-            <file>file:/F:/SWP/ProjectSWP/SWP-Team3/ApaMan/src/java/controller/common/PageIndexController.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
