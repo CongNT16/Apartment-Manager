@@ -45,7 +45,7 @@ public class AccountDAO {
         return null;
     }
 
-    public Account authenticate(String username, int apartmentId, int account_id) {
+    public Account authenticate(String username, int apartmentId, int account_accessible) {
         String query = "Select * FROM apamandb.`account` WHERE account_username = ? AND apartment_id = ? AND account_accessible = true AND deleted = false";
         try ( Connection con = MySQLConnection.getConnection();  PreparedStatement ps = (con != null) ? con.prepareStatement(query) : null;) {
             if (ps != null) {
@@ -103,6 +103,21 @@ public class AccountDAO {
     }
 
     public boolean resetPassword(String username, String password, int apartmentId) {
+        int check = 0;
+        String sql = "UPDATE apamandb.`account` SET account_password = ? WHERE account_username = ? And apartment_id = ?";
+
+        try ( Connection con = MySQLConnection.getConnection();  PreparedStatement ps = con.prepareStatement(sql);) {
+            ps.setObject(1, password);
+            ps.setObject(2, username);
+            ps.setObject(3, apartmentId);
+            check = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return check > 0;
+    }
+
+    public boolean resetPassword(String username, String password, int account_id) {
         int check = 0;
         String sql = "UPDATE apamandb.`account` SET account_password = ? WHERE account_username = ? And apartment_id = ?";
 
