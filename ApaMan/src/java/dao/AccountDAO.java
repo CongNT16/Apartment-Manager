@@ -67,7 +67,7 @@ public class AccountDAO {
         return null;
     }
 
-    public Account authenticate(String username, int apartmentId, int account_id) {
+    public Account authenticate(String username, int apartmentId,int account_id,  boolean isTrue) {
         String query = "Select * FROM apamandb.`account` WHERE account_username = ? AND apartment_id = ? AND account_accessible = true AND deleted = false";
         try ( Connection con = MySQLConnection.getConnection();  PreparedStatement ps = (con != null) ? con.prepareStatement(query) : null;) {
             if (ps != null) {
