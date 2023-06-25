@@ -45,6 +45,28 @@ public class AccountDAO {
         return null;
     }
 
+    public Account authenticate(String username, int apartmentId, int account_id) {
+        String query = "Select * FROM apamandb.`account` WHERE account_username = ? AND apartment_id = ? AND account_accessible = true AND deleted = false";
+        try ( Connection con = MySQLConnection.getConnection();  PreparedStatement ps = (con != null) ? con.prepareStatement(query) : null;) {
+            if (ps != null) {
+                ps.setObject(1, username);
+                ps.setObject(2, apartmentId);
+                ResultSet rs = ps.executeQuery();
+                if (rs != null && rs.next()) {
+                    Account obj = Account.builder()
+                            .accountId(rs.getInt("account_id"))
+                            .apartmentId(rs.getInt("apartment_id"))
+                            .accountUsername(rs.getString("account_username"))
+                            .build();
+                    return obj;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return null;
+    }
+
     public Account login(String username, String password, int apartmemtId) {
         String query = "SELECT \n"
                 + "	a.account_id,\n"
